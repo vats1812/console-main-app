@@ -1,0 +1,79 @@
+.track-main {
+    margin: 50px 45px;
+    padding: 5%;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #1d3557;
+}
+
+.track-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: #a8dadc;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.track-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    color: #457b9d;
+}
+
+.track-table {
+    width: max-content;
+    height: 100%;
+}
+
+.track-table-body {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.track-table-body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.track-table,
+.track-timeline {
+    margin: 15px;
+}
+
+.tbl-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.tbl-head {
+    color: #a8dadc;
+    font-weight: bold;
+    border: #a8dadc 1px solid;
+}
+
+.tbl-body {
+    color: #457b9d;
+    border: solid #a8dadc;
+    border-width: 0px 1px 1px 1px;
+}
+
+.tbl-head,
+.tbl-body {
+    padding: 2px 7px;
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
