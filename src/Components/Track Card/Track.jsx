@@ -1,7 +1,12 @@
-import * as React from 'react';
+import React, {  useEffect } from 'react';
 import "./Track.css";
 
-function Track({title}) {
+function Track({ details, method, title }) {
+
+
+    useEffect(() => {
+        method();
+    });
     return (
         <div>
             <div className="track-main">
@@ -24,151 +29,22 @@ function Track({title}) {
                             </div>
                         </div>
                         <div className="track-table-body">
-
-                            <div className='tbl-row'>
-                                <div className='tbl-body'>
-                                    1
-
-                                </div>
-                                <div className='tbl-body'>
-                                    Orange
-                                </div>
-                                <div className='tbl-body'>
-                                    5
-                                </div>
-                            </div>
-                            <div className='tbl-row'>
-                                <div className='tbl-body'>
-                                    1
-
-                                </div>
-                                <div className='tbl-body'>
-                                    Orange
-                                </div>
-                                <div className='tbl-body'>
-                                    5
-                                </div>
-                            </div>
-                            <div className='tbl-row'>
-                                <div className='tbl-body'>
-                                    1
-
-                                </div>
-                                <div className='tbl-body'>
-                                    Orange
-                                </div>
-                                <div className='tbl-body'>
-                                    5
-                                </div>
-                            </div>
-                            <div className='tbl-row'>
-                                <div className='tbl-body'>
-                                    1
-
-                                </div>
-                                <div className='tbl-body'>
-                                    Orange
-                                </div>
-                                <div className='tbl-body'>
-                                    5
-                                </div>
-                            </div>
-                            <div className='tbl-row'>
-                                <div className='tbl-body'>
-                                    1
-
-                                </div>
-                                <div className='tbl-body'>
-                                    Orange
-                                </div>
-                                <div className='tbl-body'>
-                                    5
-                                </div>
-                            </div>
-                            <div className='tbl-row'>
-                                <div className='tbl-body'>
-                                    1
-
-                                </div>
-                                <div className='tbl-body'>
-                                    Orange
-                                </div>
-                                <div className='tbl-body'>
-                                    5
-                                </div>
-                            </div>
-                            <div className='tbl-row'>
-                                <div className='tbl-body'>
-                                    1
-
-                                </div>
-                                <div className='tbl-body'>
-                                    Orange
-                                </div>
-                                <div className='tbl-body'>
-                                    5
-                                </div>
-                            </div>
-                            <div className='tbl-row'>
-                                <div className='tbl-body'>
-                                    1
-
-                                </div>
-                                <div className='tbl-body'>
-                                    Orange
-                                </div>
-                                <div className='tbl-body'>
-                                    5
-                                </div>
-                            </div>
-                            <div className='tbl-row'>
-                                <div className='tbl-body'>
-                                    1
-
-                                </div>
-                                <div className='tbl-body'>
-                                    Orange
-                                </div>
-                                <div className='tbl-body'>
-                                    5
-                                </div>
-                            </div>
-                            <div className='tbl-row'>
-                                <div className='tbl-body'>
-                                    1
-
-                                </div>
-                                <div className='tbl-body'>
-                                    Orange
-                                </div>
-                                <div className='tbl-body'>
-                                    5
-                                </div>
-                            </div>
-                            <div className='tbl-row'>
-                                <div className='tbl-body'>
-                                    1
-
-                                </div>
-                                <div className='tbl-body'>
-                                    Orange
-                                </div>
-                                <div className='tbl-body'>
-                                    5
-                                </div>
-                            </div>
-                            <div className='tbl-row'>
-                                <div className='tbl-body'>
-                                    1
-
-                                </div>
-                                <div className='tbl-body'>
-                                    Orange
-                                </div>
-                                <div className='tbl-body'>
-                                    5
-                                </div>
-                            </div>
+                            {details.sort((a, b) => new Date(b.date) - new Date(a.date))
+                                .map((detail) => {
+                                    return (
+                                        <div className='tbl-row' key={detail._id}>
+                                            <div className='tbl-body'>
+                                                {detail.parcelno}
+                                            </div>
+                                            <div className='tbl-body'>
+                                                {detail.destination}
+                                            </div>
+                                            <div className='tbl-body'>
+                                                {detail.indexstation}
+                                            </div>
+                                        </div>
+                                    )
+                                })}
                         </div>
                     </div>
                     <div className="track-timeline">

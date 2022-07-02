@@ -1,11 +1,15 @@
 import './App.css';
 import Body from './Components/Body/Body';
+import DataContext from './Context/DataContext';
 
 function App() {
-  return (
-    <div className="app">
-      <Body />
-    </div>
+  return (<>
+    <DataContext>
+      <div className="app">
+        <Body />
+      </div>
+    </DataContext>
+  </>
   );
 }
 
