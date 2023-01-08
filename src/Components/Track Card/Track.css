@@ -77,3 +77,72 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+.track-timeline {
+    width: 50px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.timeline-bar {
+    position: absolute;
+    margin-top: 15px;
+    width: 10px;
+    height: 200px;
+    background-color: #ef233c;
+    border-radius: 50px;
+}
+
+.timeline-dot {
+    /* width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #d90429; */
+    font-size: xx-large;
+    z-index: 10;
+    position: absolute;
+    top: 10px;
+    /* left: 0; */
+    animation: updown 2s infinite;
+    transition: all 0.5s ease-in-out;
+}
+
+@keyframes updown {
+    0% {
+        top: 10px;
+    }
+    10% {
+        top: 40px;
+    }
+    20% {
+        top: 80px;
+    }
+    30% {
+        top: 120px;
+    }
+    40% {
+        top: 160px;
+    }
+    50% {
+        top: 300px;
+    }
+    60% {
+        top: 160px;
+    }
+    70% {
+        top: 120px;
+    }
+    80% {
+        top: 80px;
+    }
+    90% {
+        top: 40px;
+    }
+    100% {
+        top: 10px;
+    }
+}

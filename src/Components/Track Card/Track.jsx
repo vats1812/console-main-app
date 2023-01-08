@@ -1,4 +1,4 @@
-import React, {  useEffect } from 'react';
+import React, { useEffect } from 'react';
 import "./Track.css";
 
 function Track({ details, method, title }) {
@@ -48,18 +48,10 @@ function Track({ details, method, title }) {
                         </div>
                     </div>
                     <div className="track-timeline">
-                        <h3>Timeline</h3>
-                        <ul>
-                            <li>
-                                Starting
-                            </li>
-                            <li>
-                                Drop
-                            </li>
-                            <li>
-                                Return
-                            </li>
-                        </ul>
+                        {/* <h3>Timeline</h3> */}
+                        <div className="timeline-bar">
+                        </div>
+                        <div className="timeline-dot">🤖</div>
                     </div>
                 </div>
             </div>
